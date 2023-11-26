@@ -47,14 +47,14 @@ nd = Nendo(config=NendoConfig(plugins=["nendo_plugin_fx_core"]))
 track = nd.library.add_track(file_path='/path/to/track.mp3')
 
 
-track = nd.plugins.fx_core.compressor(track)
+track = nd.plugins.fx_core.compressor(track=track)
 track = nd.plugins.fx_core.reverb(
     track=track,
     wet_level=0.2,
     dry_level=0.8,
     room_size=0.1,
 )
-track = nd.plugins.fx_core.limiter(track)
+track = nd.plugins.fx_core.limiter(track=track)
 track.play()
 ```
 
